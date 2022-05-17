@@ -47,7 +47,8 @@ const updateGoal: Handler = expressAsyncHandler(
       throw new Error("Goal not found");
     }
 
-    // @ts-ignore
+
+      // @ts-ignore
       const user = await User.findById(req.user.id)
 
       //Check for user
@@ -57,7 +58,7 @@ const updateGoal: Handler = expressAsyncHandler(
       }
 
       //Make sure logged-in user matches the goal user
-      if(goal.user.toString() !== user.id){
+      if(goal.user?.toString() !== user.id){
         res.status(401)
           throw new Error('User not authorized')
       }
