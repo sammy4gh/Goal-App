@@ -3,32 +3,34 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { Typography, TypographyProps,IconButton, IconButtonProps, Button, ButtonProps } from '@mui/material';
 
 
-type CustomIconButtonPropsType  = {
-    iconButtonProps : ButtonProps,
+type CustomButtonPropsType = {
+    buttonProps : ButtonProps,
     icon : ReactElement,
     labelName: string
 }
 
 
-const CustomIconButton  = ({iconButtonProps, icon, labelName} : CustomIconButtonPropsType ): JSX.Element => {
-const {size, color,sx } = iconButtonProps
+const CustomButton  = ({buttonProps, icon, labelName} : CustomButtonPropsType ): JSX.Element => {
+const {size, color,sx,variant,  } = buttonProps
     return (
-        <Button variant="text"  color={'secondary'} startIcon={icon}>
+        <Button variant={variant}  color={'primary'} startIcon={icon}>
             {labelName}
         </Button>
         );
 };
 
-CustomIconButton.defaultProps  = {
-    iconButtonProps : {
+CustomButton.defaultProps  = {
+    buttonProps : {
        size:"large",
        color:"inherit",
+        variant : 'text',
        ariaLabel:"menu",
-       sx: { mr: 2 }
+        type : '',
+       sx: { mr: 2 },
    },
    icon : <></>,
 
     labelName : 'Icon Name'
 }
 
-export default CustomIconButton;
+export default CustomButton;

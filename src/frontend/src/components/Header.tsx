@@ -1,10 +1,10 @@
-import {FunctionComponent} from 'react';
+import {FC} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import CustomIconButton from "./CustomIconButton"
+import CustomButton from "./CustomButton"
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonIcon from '@mui/icons-material/Person';
@@ -16,21 +16,25 @@ type HeaderProps = {}
 
 
 
-const Header = (props: HeaderProps): JSX.Element => {
+const Header  = (props: HeaderProps): JSX.Element => {
 
     return (
-        <AppBar  elevation={1} position="static" color={'primary'}>
+        <AppBar  elevation={1} position="static" color={'secondary'}>
             <Toolbar>
 
-                <Typography variant="h6" color={'secondary'} component="div" sx={{flexGrow: 1}}>
-                    Goaler
-                </Typography>
+                    <Typography variant="h5"  component="div" sx={{flexGrow: 1}}>
+                        <Link to={'/'} style={{color: '#212121', fontWeight:'bold'}} >
+                        Goalyn
+                        </Link>
+                    </Typography>
+
+
                <Stack direction="row" spacing={2}>
-                   <Link to={'/login'} style={{ textDecoration: 'none' }}>
-                       <CustomIconButton labelName={'Login'} icon={<LoginIcon/>}/>
+                   <Link to={'/login'} >
+                       <CustomButton labelName={'Login'} icon={<LoginIcon/>}/>
                    </Link>
                    <Link to={'/register'}>
-                       <CustomIconButton labelName={'Signup'} icon={<PersonIcon/>}/>
+                       <CustomButton labelName={'Register'} icon={<PersonIcon/>}/>
                    </Link>
                </Stack>
 
