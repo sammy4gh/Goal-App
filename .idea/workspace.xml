@@ -1,39 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb61fb80-4bbd-4ab6-9628-a8c3a8c74236" name="Changes" comment="auth ui complete">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/app/hooks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/app/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/components/FormInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/features/auth/authSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/reportWebVitals.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/src/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/yarn.lock" afterDir="false" />
+    <list default="true" id="fb61fb80-4bbd-4ab6-9628-a8c3a8c74236" name="Changes" comment="auth state">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mern-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/src/features/auth/authService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/src/components/CustomIconButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/src/components/CustomButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/src/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Types/UserTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Types/UserTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/src/features/auth/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/src/features/auth/authSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/frontend/src/pages/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/src/pages/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,8 +71,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "javascript.nodejs.core.library.configured.version": "14.19.0",
+    "javascript.nodejs.core.library.typings.version": "14.18.18",
+    "nodejs_interpreter_path": "wsl://Ubuntu-20.04@/home/sammy/.nvm/versions/node/v14.19.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "\\\\wsl$\\Ubuntu-20.04\\home\\sammy\\WebstormProjects\\mern-app\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "\\\\wsl$\\Ubuntu-20.04\\home\\sammy\\WebstormProjects\\mern-app\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -157,7 +145,29 @@
       <workItem from="1653228324047" duration="658000" />
       <workItem from="1653230793232" duration="3061000" />
       <workItem from="1653237994717" duration="945000" />
+      <workItem from="1653239212831" duration="394000" />
+      <workItem from="1653570942042" duration="4599000" />
+      <workItem from="1653739560004" duration="1220000" />
+      <workItem from="1653745064906" duration="2000000" />
+      <workItem from="1653828742751" duration="1850000" />
+      <workItem from="1653910583963" duration="2335000" />
+      <workItem from="1654001120997" duration="6378000" />
     </task>
+    <task id="LOCAL-00001" summary="auth ui complete">
+      <created>1653239459211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653239459211</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial redux setup">
+      <created>1653239503660</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653239503660</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +186,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="auth ui complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth ui complete" />
+    <MESSAGE value="initial redux setup" />
+    <MESSAGE value="auth state" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth state" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
