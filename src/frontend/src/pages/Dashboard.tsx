@@ -1,11 +1,13 @@
-import {FunctionComponent} from 'react';
+import { FunctionComponent, Suspense } from "react";
 
-type DashboardProps = {}
+type DashboardProps = {};
 
-
-const Dashboard : FunctionComponent = (props: DashboardProps) : JSX.Element => {
-
-    return (<div>Dashboard</div>);
+const Dashboard: FunctionComponent = (props: DashboardProps): JSX.Element => {
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      <div>Dashboard</div>
+    </Suspense>
+  );
 };
 
 export default Dashboard;

@@ -2153,6 +2153,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-toastify@^4.1.0":
+  "integrity" "sha512-u7Ie/7LHBsPVz/iJxi/WlRDS7Gh9csCJACTDXx+pSLuZCm94xpkwzhM3jV1L5ZxP/in0Gp2tFbJ91VrSGr1gyQ=="
+  "resolved" "https://registry.npmjs.org/@types/react-toastify/-/react-toastify-4.1.0.tgz"
+  "version" "4.1.0"
+  dependencies:
+    "react-toastify" "*"
+
 "@types/react-transition-group@^4.4.4":
   "integrity" "sha512-7gAPz7anVK5xzbeQW9wFBDg7G++aPLAFY0QaSMOou9rJZpbuI58WAuJrgu+qR92l61grlnCUe7AFX8KGahAgug=="
   "resolved" "https://registry.npmjs.org/@types/react-transition-group/-/react-transition-group-4.4.4.tgz"
@@ -7557,7 +7564,7 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react-toastify@^9.0.1":
+"react-toastify@*", "react-toastify@^9.0.1":
   "integrity" "sha512-c2zeZHkCX+WXuItS/JRqQ/8CH8Qm/je+M0rt09xe9fnu5YPJigtNOdD8zX4fwLA093V2am3abkGfOowwpkrwOQ=="
   "resolved" "https://registry.npmjs.org/react-toastify/-/react-toastify-9.0.1.tgz"
   "version" "9.0.1"
