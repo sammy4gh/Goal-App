@@ -12,7 +12,7 @@ import {
 type CustomButtonPropsType = {
   buttonProps: ButtonProps;
   icon: ReactElement;
-  labelName: string;
+  labelName?: string;
   onSubmit?: any;
 };
 
@@ -34,23 +34,26 @@ const CustomButton = ({
       startIcon={icon}
       onClick={(e) => handleSubmit(e)}
     >
-      {labelName}
+      {labelName && labelName}
     </Button>
   );
 };
 
-CustomButton.defaultProps = {
+const defaultProps: CustomButtonPropsType = {
   buttonProps: {
     size: "large",
     color: "inherit",
     variant: "text",
-    ariaLabel: "menu",
-    type: "",
+    "aria-label": "menu",
+    type: "button",
     sx: { mr: 2 },
   },
   icon: <></>,
 
-  labelName: "Icon Name",
+  labelName: "",
+};
+CustomButton.defaultProps = {
+  ...defaultProps,
 };
 
 export default CustomButton;

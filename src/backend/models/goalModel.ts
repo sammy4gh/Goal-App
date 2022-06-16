@@ -1,7 +1,7 @@
 import mongoose, { Schema, model } from "mongoose";
-import { GoalSchemaType } from "../../Types/GoalTypes";
+import { GoalType } from "../../Types/GoalTypes";
 
-const goalSchema = new Schema<GoalSchemaType>(
+const goalSchema = new Schema<GoalType>(
   {
     user: {
       type: Schema.Types.ObjectId,
@@ -17,6 +17,6 @@ const goalSchema = new Schema<GoalSchemaType>(
   { timestamps: true }
 );
 
-const goalModel = model<GoalSchemaType>("Goal", goalSchema);
+const goalModel = model<GoalType>("Goal", goalSchema);
 
 export default goalModel;

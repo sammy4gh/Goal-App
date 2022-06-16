@@ -56,7 +56,6 @@ const Register = (props: RegisterPropsType): JSX.Element => {
       [e.target.name]: e.target.value,
     }));
   };
-
   const onSubmit = (e: any) => {
     e.preventDefault();
     console.log("clicked on submit");
@@ -71,6 +70,7 @@ const Register = (props: RegisterPropsType): JSX.Element => {
       return dispatch(register(userData));
     }
   };
+
   return (
     <>
       <Suspense fallback={<p>Loading...</p>}>

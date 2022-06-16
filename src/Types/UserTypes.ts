@@ -1,6 +1,8 @@
+import { InitialStateType } from "./GlobalTypes";
+
 export type UserType = {
   /** name of user*/
-  name: string;
+  name?: string;
   /** unique email of user*/
   email: string;
 };
@@ -10,10 +12,6 @@ export type UserSchemaType = UserType & {
   password: string;
 };
 
-export type AuthState = {
+export type AuthState = InitialStateType & {
   user: UserType | null;
-  isError: boolean;
-  isSuccess: boolean;
-  isLoading: boolean;
-  message: string | unknown | any;
 };

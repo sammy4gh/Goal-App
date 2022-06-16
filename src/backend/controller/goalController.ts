@@ -4,14 +4,14 @@ import expressAsyncHandler from "express-async-handler";
 import userModel from "../models/userModels";
 
 const Goal = goalModel;
-const User = userModel
+const User = userModel;
 //@desc Get goals
 //@route GET /api/goals
 //@access Private
 const getGoal: Handler = expressAsyncHandler(
   async (req: Request, res: Response) => {
     // @ts-ignore
-      const goals = await Goal.find({user :req.user.id});
+    const goals = await Goal.find({ user: req.user.id });
     res.status(200).json(goals);
   }
 );
@@ -26,10 +26,10 @@ const setGoal: Handler = expressAsyncHandler(
       throw new Error("Please add a text field");
     }
 
-      const goal = await Goal.create({
+    const goal = await Goal.create({
       text: req.body.text,
-          // @ts-ignore
-        user :req.user.id
+      // @ts-ignore
+      user: req.user.id,
     });
     res.status(200).json(goal);
   }
@@ -47,21 +47,19 @@ const updateGoal: Handler = expressAsyncHandler(
       throw new Error("Goal not found");
     }
 
+    //Check for user
+    // @ts-ignore
+    if (!req.user) {
+      res.status(401);
+      throw new Error("User not found");
+    }
 
-      // @ts-ignore
-      const user = await User.findById(req.user.id)
-
-      //Check for user
-      if (!user){
-          res.status(401)
-          throw new Error('User not found')
-      }
-
-      //Make sure logged-in user matches the goal user
-      if(goal.user?.toString() !== user.id){
-        res.status(401)
-          throw new Error('User not authorized')
-      }
+    //Make sure logged-in user matches the goal user
+    // @ts-ignore
+    if (goal.user?.toString() !== req.user.id) {
+      res.status(401);
+      throw new Error("User not authorized");
+    }
     const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
@@ -82,20 +80,19 @@ const deleteGoal: Handler = expressAsyncHandler(
       throw new Error("Goal not found");
     }
 
-      // @ts-ignore
-      const user = await User.findById(req.user.id)
+    //Check for user
+    // @ts-ignore
+    if (!req.user) {
+      res.status(401);
+      throw new Error("User not found");
+    }
 
-      //Check for user
-      if (!user){
-          res.status(401)
-          throw new Error('User not found')
-      }
-
-      //Make sure logged-in user matches the goal user
-      if(goal.user.toString() !== user.id){
-          res.status(401)
-          throw new Error('User not authorized')
-      }
+    //Make sure logged-in user matches the goal user
+    // @ts-ignore
+    if (goal.user.toString() !== req.user.id) {
+      res.status(401);
+      throw new Error("User not authorized");
+    }
 
     await goal.remove();
     res.status(200).json({ id: req.params.id });

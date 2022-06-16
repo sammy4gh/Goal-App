@@ -2,7 +2,14 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
-export function Heading(props: { user: any }) {
+
+type HeadingPropsType = {
+  title: string;
+  subtitle: string;
+};
+
+function Heading({ title, subtitle }: HeadingPropsType) {
+
   return (
     <Grid item xs={8} style={{ marginBottom: 20 }}>
       <Stack
@@ -16,7 +23,7 @@ export function Heading(props: { user: any }) {
           component="div"
           style={{ fontWeight: "bold", textAlign: "center" }}
         >
-          Welcome {props.user && props.user.name}
+          {title}
         </Typography>
       </Stack>
       <Typography
@@ -24,8 +31,18 @@ export function Heading(props: { user: any }) {
         component="div"
         style={{ fontWeight: "bold", color: "grey", textAlign: "center" }}
       >
-        Goal Dashboard
+        {subtitle}
       </Typography>
     </Grid>
   );
 }
+
+const defaultProps: HeadingPropsType = {
+  title: "Title",
+  subtitle: "This should be the subtitle"
+};
+Heading.defaultProps = {
+  ...defaultProps
+};
+
+export default Heading;
