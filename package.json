@@ -7,7 +7,8 @@
     "start": "ts-node src/backend/server.ts",
     "server": "ts-node-dev --respawn src/backend/server.ts",
     "client": "npm start --prefix src/frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix src/frontend && npm run build --prefix src/frontend"
   },
   "keywords": [],
   "author": "",
