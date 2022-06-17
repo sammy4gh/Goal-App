@@ -4,16 +4,16 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+      "npm": "6.x"
   },
   "scripts": {
     "start": "node dist/backend/server.js",
     "build": "npx tsc",
-    "postinstall": "tsc",
     "server": "ts-node-dev --respawn src/backend/server.ts",
     "client": "npm run start --prefix src/frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install  --legacy-peer-deps --prefix ./src/frontend && npm run build    --prefix ./src/frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install  --legacy-peer-deps --prefix ./dist/frontend && npm run build    --prefix ./dist/frontend"
   },
   "keywords": [],
   "author": "",
