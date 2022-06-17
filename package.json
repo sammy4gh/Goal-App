@@ -12,7 +12,7 @@
     "build": "npx tsc",
     "server": "ts-node-dev --respawn src/backend/server.ts",
     "client": "npm run start --prefix src/frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "keywords": [],
   "author": "",
