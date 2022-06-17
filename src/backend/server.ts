@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 connectDB().then((r) => console.log(`MongoDB Connected : ${r}`));
 
-const app: Application = express();
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -23,11 +23,11 @@ app.use("/api/users", userRoutes);
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname,'../frontend/build')))
 
-    app.get('*', (req, res)=>{
+    app.get('*', (req: any, res: { sendFile: (arg0: string) => void; })=>{
         res.sendFile(path.resolve(__dirname, '../', 'frontend', 'build', 'index.html'))
     })
 }else{
-    app.get('/', (req, res)=> res.send('Please set to production'))
+    app.get('/', (req: any, res: { send: (arg0: string) => any; })=> res.send('Please set to production'))
 }
 
 app.use(errorHandler);
