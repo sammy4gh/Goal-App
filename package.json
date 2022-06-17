@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node dist/backend/server.js",
     "build": "npx tsc",
+    "postinstall": "tsc",
     "server": "ts-node-dev --respawn src/backend/server.ts",
     "client": "npm run start --prefix src/frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
