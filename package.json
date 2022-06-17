@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/backend/server.ts",
+    "start": "node src/backend/server.ts",
     "server": "ts-node-dev --respawn src/backend/server.ts",
     "client": "npm run start --prefix src/frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install  --legacy-peer-deps --prefix ./src/frontend && npm run build    --prefix ./src/frontend &&  \"npm run server\" "
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install  --legacy-peer-deps --prefix ./src/frontend && npm run build    --prefix ./src/frontend"
   },
   "keywords": [],
   "author": "",
