@@ -1,2 +1,2 @@
 worker : npm start
-web: node dist/index.js
+web: node dist/backend/server.js
