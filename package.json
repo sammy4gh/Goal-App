@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/backend/server.ts",
+    "start": "ts-node src/backend/server.ts",
     "postinstall": "tsc",
     "server": "ts-node-dev --respawn src/backend/server.ts",
     "client": "npm run start --prefix src/frontend",
