@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
   "scripts": {
-    "start": "node src/backend/server.ts",
-    "server": "node-dev --respawn src/backend/server.ts",
+    "start": "node dist/backend/server.js",
+    "build": "npx tsc",
+    "server": "ts-node-dev --respawn src/backend/server.ts",
     "client": "npm run start --prefix src/frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install  --legacy-peer-deps --prefix ./src/frontend && npm run build    --prefix ./src/frontend"
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "keywords": [],
   "author": "",
@@ -29,6 +33,7 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.13",
+    "@types/jest": "^28.1.1",
     "@types/jsonwebtoken": "^8.5.8",
     "@types/node": "^17.0.21",
     "concurrently": "^7.2.0",

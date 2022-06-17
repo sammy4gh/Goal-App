@@ -15,5 +15,5 @@ export type GoalType =  GoalDataType & {
 
 
 export type GoalStateType = InitialStateType & {
-  goals: GoalType[] | never | 
+  goals: GoalType[] | never 
 };
