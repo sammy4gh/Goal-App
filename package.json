@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node dist/backend/server.js",
-    "build": "npx tsc && npm run build --prefix ./dist/frontend",
+    "build": " npm run build --prefix ./src/frontend --O --prefix ./dist/frontend && npx tsc",
     "postinstall": "tsc",
     "server": "ts-node-dev --respawn src/backend/server.ts",
     "client": "npm run start --prefix src/frontend",
